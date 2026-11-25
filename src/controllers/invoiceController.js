@@ -703,8 +703,8 @@ exports.paymentIpn = async (req, res) => {
                 status === "CANCEL" || status === "CANCELLED"
                     ? "cancel"
                     : status === "EXPIRED"
-                      ? "expired"
-                      : "fail";
+                        ? "expired"
+                        : "fail";
             await releaseInvoiceReservation(
                 trx_id,
                 nextStatus
